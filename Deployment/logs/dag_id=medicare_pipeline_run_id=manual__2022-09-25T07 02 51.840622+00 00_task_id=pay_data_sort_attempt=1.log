@@ -1,0 +1,45 @@
+kiran-Lenovo-Z50-70
+*** Reading local file: /home/kiran/airflow/logs/dag_id=medicare_pipeline/run_id=manual__2022-09-25T07:02:51.840622+00:00/task_id=pay_data_sort/attempt=1.log
+[2022-09-25T12:40:23.685+0530] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: medicare_pipeline.pay_data_sort manual__2022-09-25T07:02:51.840622+00:00 [queued]>
+[2022-09-25T12:40:23.720+0530] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: medicare_pipeline.pay_data_sort manual__2022-09-25T07:02:51.840622+00:00 [queued]>
+[2022-09-25T12:40:23.720+0530] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-25T12:40:23.721+0530] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2022-09-25T12:40:23.721+0530] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-25T12:40:23.778+0530] {taskinstance.py:1389} INFO - Executing <Task(BashOperator): pay_data_sort> on 2022-09-25 07:02:51.840622+00:00
+[2022-09-25T12:40:23.796+0530] {standard_task_runner.py:52} INFO - Started process 73478 to run task
+[2022-09-25T12:40:23.806+0530] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'medicare_pipeline', 'pay_data_sort', 'manual__2022-09-25T07:02:51.840622+00:00', '--job-id', '189', '--raw', '--subdir', 'DAGS_FOLDER/medicare_pipeline.py', '--cfg-path', '/tmp/tmp1xwuh434', '--error-file', '/tmp/tmppv18o1im']
+[2022-09-25T12:40:23.813+0530] {standard_task_runner.py:80} INFO - Job 189: Subtask pay_data_sort
+[2022-09-25T12:40:24.195+0530] {task_command.py:371} INFO - Running <TaskInstance: medicare_pipeline.pay_data_sort manual__2022-09-25T07:02:51.840622+00:00 [running]> on host kiran-Lenovo-Z50-70
+[2022-09-25T12:40:24.504+0530] {taskinstance.py:1581} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=medicare_pipeline
+AIRFLOW_CTX_TASK_ID=pay_data_sort
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-25T07:02:51.840622+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-25T07:02:51.840622+00:00
+[2022-09-25T12:40:24.507+0530] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-09-25T12:40:24.509+0530] {subprocess.py:74} INFO - Running command: ['/usr/bin/bash', '-c', '\n    source /home/kiran/project/venv/bin/activate;\n    cd //home/kiran/medicare/src_deploy\n    python3 Payment_data_sort_deployment.py;\n    ']
+[2022-09-25T12:40:24.528+0530] {subprocess.py:85} INFO - Output:
+[2022-09-25T12:41:05.486+0530] {subprocess.py:92} INFO - Connection to mongodb : success
+[2022-09-25T12:41:05.487+0530] {subprocess.py:92} INFO - Raw Payment data loaded
+[2022-09-25T12:41:05.487+0530] {subprocess.py:92} INFO - Not null rows of NPI selected
+[2022-09-25T12:41:05.488+0530] {subprocess.py:92} INFO - NPI and Payment data selected
+[2022-09-25T12:41:05.489+0530] {subprocess.py:92} INFO - Raw payment data grouped on NPI aggregated sum done on Payments
+[2022-09-25T12:41:05.490+0530] {subprocess.py:92} INFO - <class 'pandas.core.frame.DataFrame'>
+[2022-09-25T12:41:05.491+0530] {subprocess.py:92} INFO - Int64Index: 885 entries, 1003000126 to 1972640050
+[2022-09-25T12:41:05.492+0530] {subprocess.py:92} INFO - Data columns (total 1 columns):
+[2022-09-25T12:41:05.493+0530] {subprocess.py:92} INFO -  #   Column          Non-Null Count  Dtype
+[2022-09-25T12:41:05.494+0530] {subprocess.py:92} INFO - ---  ------          --------------  -----
+[2022-09-25T12:41:05.495+0530] {subprocess.py:92} INFO -  0   Total_payments  885 non-null    float64
+[2022-09-25T12:41:05.496+0530] {subprocess.py:92} INFO - dtypes: float64(1)
+[2022-09-25T12:41:05.496+0530] {subprocess.py:92} INFO - memory usage: 13.8 KB
+[2022-09-25T12:41:05.496+0530] {subprocess.py:92} INFO - Aggregated data saved
+[2022-09-25T12:41:05.498+0530] {subprocess.py:92} INFO - CLuster connection closed
+[2022-09-25T12:41:06.172+0530] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-09-25T12:41:06.285+0530] {taskinstance.py:1407} INFO - Marking task as SUCCESS. dag_id=medicare_pipeline, task_id=pay_data_sort, execution_date=20220925T070251, start_date=20220925T071023, end_date=20220925T071106
+[2022-09-25T12:41:06.327+0530] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-25T12:41:06.467+0530] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check
+

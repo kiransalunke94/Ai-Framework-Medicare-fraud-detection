@@ -1,0 +1,71 @@
+kiran-Lenovo-Z50-70
+*** Reading local file: /home/kiran/airflow/logs/dag_id=medicare_pipeline/run_id=manual__2022-09-25T07:02:51.840622+00:00/task_id=Drug_data_sort/attempt=1.log
+[2022-09-25T12:40:23.571+0530] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: medicare_pipeline.Drug_data_sort manual__2022-09-25T07:02:51.840622+00:00 [queued]>
+[2022-09-25T12:40:23.616+0530] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: medicare_pipeline.Drug_data_sort manual__2022-09-25T07:02:51.840622+00:00 [queued]>
+[2022-09-25T12:40:23.617+0530] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-25T12:40:23.619+0530] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2022-09-25T12:40:23.620+0530] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-25T12:40:23.667+0530] {taskinstance.py:1389} INFO - Executing <Task(BashOperator): Drug_data_sort> on 2022-09-25 07:02:51.840622+00:00
+[2022-09-25T12:40:23.675+0530] {standard_task_runner.py:52} INFO - Started process 73474 to run task
+[2022-09-25T12:40:23.691+0530] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'medicare_pipeline', 'Drug_data_sort', 'manual__2022-09-25T07:02:51.840622+00:00', '--job-id', '188', '--raw', '--subdir', 'DAGS_FOLDER/medicare_pipeline.py', '--cfg-path', '/tmp/tmpyug6pm3d', '--error-file', '/tmp/tmpxhav6awc']
+[2022-09-25T12:40:23.696+0530] {standard_task_runner.py:80} INFO - Job 188: Subtask Drug_data_sort
+[2022-09-25T12:40:24.067+0530] {task_command.py:371} INFO - Running <TaskInstance: medicare_pipeline.Drug_data_sort manual__2022-09-25T07:02:51.840622+00:00 [running]> on host kiran-Lenovo-Z50-70
+[2022-09-25T12:40:24.398+0530] {taskinstance.py:1581} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=medicare_pipeline
+AIRFLOW_CTX_TASK_ID=Drug_data_sort
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-25T07:02:51.840622+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-25T07:02:51.840622+00:00
+[2022-09-25T12:40:24.400+0530] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-09-25T12:40:24.402+0530] {subprocess.py:74} INFO - Running command: ['/usr/bin/bash', '-c', '\n    source /home/kiran/project/venv/bin/activate;\n    cd //home/kiran/medicare/src_deploy\n    python3 drug_data_sort_deployment.py;\n    ']
+[2022-09-25T12:40:24.423+0530] {subprocess.py:85} INFO - Output:
+[2022-09-25T12:40:42.573+0530] {subprocess.py:92} INFO - loading data
+[2022-09-25T12:40:42.574+0530] {subprocess.py:92} INFO - Connection to mongodb : success
+[2022-09-25T12:40:42.574+0530] {subprocess.py:92} INFO - drug data loaded successfully
+[2022-09-25T12:40:42.574+0530] {subprocess.py:92} INFO - Processing drug dataframe
+[2022-09-25T12:40:42.575+0530] {subprocess.py:92} INFO - Grouping all rows on npi with sum , mean and max for drug values
+[2022-09-25T12:40:42.575+0530] {subprocess.py:92} INFO - Raw drug data grouped and aggregated with max,mean and sum columns
+[2022-09-25T12:40:42.578+0530] {subprocess.py:92} INFO - shape of a aggregated dataframe
+[2022-09-25T12:40:42.578+0530] {subprocess.py:92} INFO - (885, 12)
+[2022-09-25T12:40:42.579+0530] {subprocess.py:92} INFO - Column names renamed
+[2022-09-25T12:40:42.579+0530] {subprocess.py:92} INFO - selecting string columns
+[2022-09-25T12:40:42.579+0530] {subprocess.py:92} INFO - Joining string and aggregated dataframe
+[2022-09-25T12:40:42.579+0530] {subprocess.py:92} INFO - final sorted drug dataframe
+[2022-09-25T12:40:42.579+0530] {subprocess.py:92} INFO - <class 'pandas.core.frame.DataFrame'>
+[2022-09-25T12:40:42.580+0530] {subprocess.py:92} INFO - RangeIndex: 886 entries, 0 to 885
+[2022-09-25T12:40:42.580+0530] {subprocess.py:92} INFO - Data columns (total 19 columns):
+[2022-09-25T12:40:42.580+0530] {subprocess.py:92} INFO -  #   Column               Non-Null Count  Dtype
+[2022-09-25T12:40:42.580+0530] {subprocess.py:92} INFO - ---  ------               --------------  -----
+[2022-09-25T12:40:42.581+0530] {subprocess.py:92} INFO -  0   Unnamed: 0           886 non-null    int64
+[2022-09-25T12:40:42.581+0530] {subprocess.py:92} INFO -  1   NPI                  886 non-null    int64
+[2022-09-25T12:40:42.581+0530] {subprocess.py:92} INFO -  2   City                 886 non-null    object
+[2022-09-25T12:40:42.581+0530] {subprocess.py:92} INFO -  3   State                886 non-null    object
+[2022-09-25T12:40:42.581+0530] {subprocess.py:92} INFO -  4   First_name           886 non-null    object
+[2022-09-25T12:40:42.582+0530] {subprocess.py:92} INFO -  5   last_org_name        886 non-null    object
+[2022-09-25T12:40:42.582+0530] {subprocess.py:92} INFO -  6   Speciality           886 non-null    object
+[2022-09-25T12:40:42.582+0530] {subprocess.py:92} INFO -  7   sum_Tot_Drug_Cst     886 non-null    float64
+[2022-09-25T12:40:42.582+0530] {subprocess.py:92} INFO -  8   avg_Tot_Drug_Cst     886 non-null    float64
+[2022-09-25T12:40:42.582+0530] {subprocess.py:92} INFO -  9   max_Tot_Drug_Cst     886 non-null    float64
+[2022-09-25T12:40:42.583+0530] {subprocess.py:92} INFO -  10  sum_Total_claims     886 non-null    float64
+[2022-09-25T12:40:42.583+0530] {subprocess.py:92} INFO -  11  avg_Total_claims     886 non-null    float64
+[2022-09-25T12:40:42.583+0530] {subprocess.py:92} INFO -  12  max_Total_claims     886 non-null    float64
+[2022-09-25T12:40:42.583+0530] {subprocess.py:92} INFO -  13  sum_Tot_Day_Suply    886 non-null    float64
+[2022-09-25T12:40:42.583+0530] {subprocess.py:92} INFO -  14  avg_Tot_Day_Suply    886 non-null    float64
+[2022-09-25T12:40:42.584+0530] {subprocess.py:92} INFO -  15  max_Tot_Day_Suply    886 non-null    float64
+[2022-09-25T12:40:42.584+0530] {subprocess.py:92} INFO -  16  sum_Tot_30day_Fills  886 non-null    float64
+[2022-09-25T12:40:42.584+0530] {subprocess.py:92} INFO -  17  avg_Tot_30day_Fills  886 non-null    float64
+[2022-09-25T12:40:42.584+0530] {subprocess.py:92} INFO -  18  max_Tot_30day_Fills  886 non-null    float64
+[2022-09-25T12:40:42.584+0530] {subprocess.py:92} INFO - dtypes: float64(12), int64(2), object(5)
+[2022-09-25T12:40:42.584+0530] {subprocess.py:92} INFO - memory usage: 131.6+ KB
+[2022-09-25T12:40:42.591+0530] {subprocess.py:92} INFO - None
+[2022-09-25T12:40:42.591+0530] {subprocess.py:92} INFO - Drug data frame sorted and saved
+[2022-09-25T12:40:42.592+0530] {subprocess.py:92} INFO - CLuster connection closed
+[2022-09-25T12:40:43.405+0530] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-09-25T12:40:43.612+0530] {taskinstance.py:1407} INFO - Marking task as SUCCESS. dag_id=medicare_pipeline, task_id=Drug_data_sort, execution_date=20220925T070251, start_date=20220925T071023, end_date=20220925T071043
+[2022-09-25T12:40:43.657+0530] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-25T12:40:43.828+0530] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check
+

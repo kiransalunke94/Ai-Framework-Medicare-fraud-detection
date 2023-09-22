@@ -1,0 +1,52 @@
+kiran-Lenovo-Z50-70
+*** Reading local file: /home/kiran/airflow/logs/dag_id=medicare_pipeline/run_id=manual__2022-09-25T07:02:51.840622+00:00/task_id=medicine_data_sort/attempt=1.log
+[2022-09-25T12:40:23.303+0530] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: medicare_pipeline.medicine_data_sort manual__2022-09-25T07:02:51.840622+00:00 [queued]>
+[2022-09-25T12:40:23.328+0530] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: medicare_pipeline.medicine_data_sort manual__2022-09-25T07:02:51.840622+00:00 [queued]>
+[2022-09-25T12:40:23.329+0530] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-25T12:40:23.329+0530] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2022-09-25T12:40:23.329+0530] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-25T12:40:23.399+0530] {taskinstance.py:1389} INFO - Executing <Task(BashOperator): medicine_data_sort> on 2022-09-25 07:02:51.840622+00:00
+[2022-09-25T12:40:23.422+0530] {standard_task_runner.py:52} INFO - Started process 73468 to run task
+[2022-09-25T12:40:23.438+0530] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'medicare_pipeline', 'medicine_data_sort', 'manual__2022-09-25T07:02:51.840622+00:00', '--job-id', '187', '--raw', '--subdir', 'DAGS_FOLDER/medicare_pipeline.py', '--cfg-path', '/tmp/tmpr0v_xbbo', '--error-file', '/tmp/tmp3vofke6p']
+[2022-09-25T12:40:23.443+0530] {standard_task_runner.py:80} INFO - Job 187: Subtask medicine_data_sort
+[2022-09-25T12:40:23.781+0530] {task_command.py:371} INFO - Running <TaskInstance: medicare_pipeline.medicine_data_sort manual__2022-09-25T07:02:51.840622+00:00 [running]> on host kiran-Lenovo-Z50-70
+[2022-09-25T12:40:24.138+0530] {taskinstance.py:1581} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=medicare_pipeline
+AIRFLOW_CTX_TASK_ID=medicine_data_sort
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-25T07:02:51.840622+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-25T07:02:51.840622+00:00
+[2022-09-25T12:40:24.141+0530] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-09-25T12:40:24.144+0530] {subprocess.py:74} INFO - Running command: ['/usr/bin/bash', '-c', '\n    source /home/kiran/project/venv/bin/activate;\n    cd //home/kiran/medicare/src_deploy\n    python3 medicines.py;\n    ']
+[2022-09-25T12:40:24.165+0530] {subprocess.py:85} INFO - Output:
+[2022-09-25T12:40:59.297+0530] {subprocess.py:92} INFO - Connection to mongodb : success
+[2022-09-25T12:40:59.297+0530] {subprocess.py:92} INFO - Raw data loaded for generating medicine columns
+[2022-09-25T12:40:59.298+0530] {subprocess.py:92} INFO - Prscrbr_NPI,Gnrc_Name,Tot_Clms,Tot_Day_Suply,Tot_Drug_Cst columns selected
+[2022-09-25T12:40:59.298+0530] {subprocess.py:92} INFO - Raw medicine data columns renamed
+[2022-09-25T12:40:59.298+0530] {subprocess.py:92} INFO - Raw data for medecine grouped on NPI and drug name
+[2022-09-25T12:40:59.298+0530] {subprocess.py:92} INFO - Number of medicine columns from ML model train data loaded
+[2022-09-25T12:40:59.298+0530] {subprocess.py:92} INFO - Empty dataframe created with all medicine columns
+[2022-09-25T12:40:59.299+0530] {subprocess.py:92} INFO - Transformation data
+[2022-09-25T12:40:59.299+0530] {subprocess.py:92} INFO - Checking null values
+[2022-09-25T12:40:59.299+0530] {subprocess.py:92} INFO - NPI                                   0
+[2022-09-25T12:40:59.299+0530] {subprocess.py:92} INFO - Methocarbamol_Tot_Drug_Cst            0
+[2022-09-25T12:40:59.299+0530] {subprocess.py:92} INFO - Atorvastatin Calcium_Tot_Drug_Cst     0
+[2022-09-25T12:40:59.299+0530] {subprocess.py:92} INFO - Atorvastatin Calcium_Tot_Clms         0
+[2022-09-25T12:40:59.299+0530] {subprocess.py:92} INFO - Atorvastatin Calcium_Tot_Day_Suply    0
+[2022-09-25T12:40:59.300+0530] {subprocess.py:92} INFO -                                      ..
+[2022-09-25T12:40:59.300+0530] {subprocess.py:92} INFO - Pen Needle, Diabetic_Tot_Drug_Cst     0
+[2022-09-25T12:40:59.300+0530] {subprocess.py:92} INFO - Pen Needle, Diabetic_Tot_Day_Suply    0
+[2022-09-25T12:40:59.300+0530] {subprocess.py:92} INFO - Tramadol Hcl_Tot_Drug_Cst             0
+[2022-09-25T12:40:59.300+0530] {subprocess.py:92} INFO - Tramadol Hcl_Tot_Clms                 0
+[2022-09-25T12:40:59.301+0530] {subprocess.py:92} INFO - Tramadol Hcl_Tot_Day_Suply            0
+[2022-09-25T12:40:59.301+0530] {subprocess.py:92} INFO - Length: 103, dtype: int64
+[2022-09-25T12:40:59.301+0530] {subprocess.py:92} INFO - Dataframe with medicines columns save succesfull
+[2022-09-25T12:41:00.129+0530] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-09-25T12:41:00.334+0530] {taskinstance.py:1407} INFO - Marking task as SUCCESS. dag_id=medicare_pipeline, task_id=medicine_data_sort, execution_date=20220925T070251, start_date=20220925T071023, end_date=20220925T071100
+[2022-09-25T12:41:00.415+0530] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-25T12:41:00.514+0530] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check
+

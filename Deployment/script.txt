@@ -1,0 +1,130 @@
+﻿Hdfs :
+Start-all.sh
+
+
+Airflow :
+source /home/kiran/project/venv/bin/activate;
+cd /home;
+
+airflow scheduler
+airflow webserver -p 8080
+
+if required
+sudo systemctl start mysql.service
+
+id :  kiraan 
+pass : kiran5050
+
+
+cd /home/kiran/medicare/src_deploy
+
+see hive table
+hive
+create database medicare
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://api.openweathermap.org/data/2.5/weather?lat=18.521428&lon=73.8544541&appid=cff683101f5da995234cd01eb7a0716c
+
+zookeeper-server-start.sh $KAFKA_HOME/config/zookeeper.properties
+
+kafka-server-start.sh $KAFKA_HOME/config/server.properties
+
+cd /home/kiran/medicare/src_deploy
+
+spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.1 consumerr.py
+
+hdfs fsck -list-corruptfileblocks
+
+hdfs dfsadmin -safemode leave
+
+
+mongodb+srv://m001-student:m001-mongodb-basics@sandbox.uughf.mongodb.net/?retryWrites=true&w=majority
+
+
+mongodb+srv://m001-student:m001-studenm001-mongodb-basics@sandbox.uughf.mongodb.net/test
+
+mongodb://localhost:27017
+
+https://search.maven.org/artifact/org.mongodb.spark/mongo-spark-connector/10.0.0/jar  ========== all.jar
+
+m001-mongodb-basics
+
+mongosh "mongodb+srv://sandbox.uughf.mongodb.net/myFirstDatabase" --apiVersion 1 --username m001-student
+
+source /home/kiran/project/venv/bin/activate;
+cd /home;
+
+airflow scheduler
+airflow webserver -p 8080
+sudo systemctl start mysql.service
+
+
+
+postgresql
+https://linuxhint.com/postgresql_installation_guide_ubuntu_20-04/
+
+sudo systemctl status postgresql.service
+
+sudo systemctl stop postgresql.service
+sudo systemctl start postgresql.service
+sudo systemctl enable postgresql.service
+
+shell
+sudo su -l postgres
+
+psql
+
+
+
+airflow
+kiraan kiran5050
