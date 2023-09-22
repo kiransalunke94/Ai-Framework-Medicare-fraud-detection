@@ -35,6 +35,10 @@ Deployment
 
 ![airflow1](https://github.com/kiransalunke94/MEDICARE-FRAUD-DETECTION-AI/assets/120722467/d4fa5f53-315c-497f-934f-64ac5be12e48)
 
+Result
+![monthly_dashboard](https://github.com/kiransalunke94/MEDICARE-FRAUD-DETECTION-AI/assets/120722467/38e16e87-cc79-4df9-92e4-cef382a593ac)
+
+List of all possible fraud applicants displayed after processing on monthly basis
 
 CONCLUSION
 
