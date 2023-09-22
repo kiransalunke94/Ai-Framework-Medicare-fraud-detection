@@ -1,4 +1,4 @@
-# MEDICARE-FRAUD-DETECTION-AI
+# AI framework for medicare fraud detection
 Medicare fraud detection using AI
 
 INTRODUCTION
