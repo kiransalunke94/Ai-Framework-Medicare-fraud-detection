@@ -29,7 +29,8 @@ Doctors in the US are required to proclaim all installments got from pharmaceuti
 
 METHODOLGY
 
-The methodology of this project will follow the below procedures: • Data exploration, cleansing and preparation • Build a data model to join all datasets • Feature engineering to choose the effective feature sets for the different fraud patterns • Build a machine learning model to detect the different fraud patterns • Build pipeline in Airflow to connect data generators and consumers • Spark Structured Streaming to Process data and feed it to Model  
+The methodology of this project will follow the below procedures: • Data exploration, cleansing and preparation • Build a data model to join all datasets • Feature engineering to choose the effective feature sets for the different fraud patterns • Build a machine learning model to detect the different fraud patterns • Build pipeline in Airflow to connect data generators and consumers • Use Kafka to enable data transfer from user to db.
+
 
 Deployment
 
