@@ -31,6 +31,11 @@ METHODOLGY
 
 The methodology of this project will follow the below procedures: • Data exploration, cleansing and preparation • Build a data model to join all datasets • Feature engineering to choose the effective feature sets for the different fraud patterns • Build a machine learning model to detect the different fraud patterns • Build pipeline in Airflow to connect data generators and consumers • Spark Structured Streaming to Process data and feed it to Model  
 
+Deployment
+
+![airflow1](https://github.com/kiransalunke94/MEDICARE-FRAUD-DETECTION-AI/assets/120722467/d4fa5f53-315c-497f-934f-64ac5be12e48)
+
+
 CONCLUSION
 
 ● With the increasing number of populations of over 65 in USA, Medicare Fraud Detection is essential ● All types of Fraud Patterns have been Covered. ● Most Fraud Cases committed are in bay area ● Out of 5 Models Performed, best resulting model is Random Forest with accuracy 72 % and recall 83%
