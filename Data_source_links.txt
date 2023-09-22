@@ -1,0 +1,11 @@
+Model build on 2020 data.
+
+Drug data source:
+https://data.cms.gov/provider-summary-by-type-of-service/medicare-part-d-prescribers/medicare-part-d-prescribers-by-provider-and-drug
+
+Payment data:
+https://www.cms.gov/OpenPayments/Data/Dataset-Downloads
+
+Fraud data:
+https://oig.hhs.gov/exclusions/exclusions_list.asp
+
